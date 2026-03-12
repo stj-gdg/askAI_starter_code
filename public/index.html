@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask AI · GDG Workshop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="bg-mesh" aria-hidden="true">
+      <div class="orb orb-1"></div>
+
+      <div class="orb orb-2"></div>
+
+      <div class="orb orb-3"></div>
+
+      <div class="orb orb-4"></div>
+    </div>
+    <div class="wrapper">
+      <div class="gdg-chip">
+        <div class="gdg-letters">
+          <span>G</span>
+          <span>D</span>
+          <span>G</span>
+          <span>&nbsp;</span>
+        </div>
+
+        <span class="gdg-chip-text">on Campus &nbsp;·&nbsp; AI Workshop</span>
+      </div>
+
+      <div class="hero">
+        <div class="hero-gem">
+          <svg
+            width="64"
+            height="64"
+            viewBox="0 0 52 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="26,4 48,18 48,34 26,48 4,34 4,18"
+              fill="rgba(255,255,255,0.06)"
+              stroke="rgba(255,255,255,0.2)"
+              stroke-width="1"
+            />
+            <polygon points="26,4 48,18 26,28" fill="#4285F4" opacity="0.95" />
+            <polygon points="48,18 48,34 26,28" fill="#EA4335" opacity="0.9" />
+            <polygon points="48,34 26,48 26,28" fill="#FBBC04" opacity="0.95" />
+            <polygon points="26,48 4,34 26,28" fill="#34A853" opacity="0.9" />
+            <polygon points="4,34 4,18 26,28" fill="#4285F4" opacity="0.5" />
+            <polygon points="4,18 26,4 26,28" fill="#EA4335" opacity="0.5" />
+          </svg>
+        </div>
+
+        <h1>Ask <span class="gradient-word">AI</span></h1>
+
+        <p>
+          Type any question in plain English and get an AI‑powered answer —
+          built live at this workshop.
+        </p>
+      </div>
+
+      <div class="glass-card">
+        <div class="field-label">Your question</div>
+        <textarea
+          id="question"
+          placeholder="e.g. Explain how the internet works in simple terms…"
+        ></textarea>
+        <div class="hint"><kbd>Ctrl</kbd>+<kbd>Enter</kbd> to submit</div>
+        <button id="ask-btn" onclick="askGemini()">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="position: relative; z-index: 1"
+          >
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+
+          <span style="position: relative; z-index: 1">Ask AI</span>
+        </button>
+
+        <div id="error-area"></div>
+        <div id="response-area">
+          <div class="response-header">
+            <div class="g-dots">
+              <div class="g-dot"></div>
+              <div class="g-dot"></div>
+              <div class="g-dot"></div>
+              <div class="g-dot"></div>
+            </div>
+
+            <span class="response-label">Gemini</span>
+          </div>
+
+          <div class="response-divider"></div>
+
+          <div id="response-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
