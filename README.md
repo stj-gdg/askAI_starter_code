@@ -8,6 +8,9 @@ nvm install --lts
 
 ## Windows Users–
 - Go to the following page and download nvm-setup.exe: https://github.com/coreybutler/nvm-windows/releases/tag/1.1.12
+```
+nvm install --lts
+```
 
 ## Verify Install:
 ```
